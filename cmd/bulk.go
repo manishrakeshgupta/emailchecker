@@ -71,7 +71,7 @@ func init() {
 	bulkCmd.Flags().IntVarP(&bulkPort, "port", "p", 25, "SMTP port")
 	bulkCmd.Flags().StringVarP(&bulkOutput, "output", "o", "results.csv", "Output file")
 	bulkCmd.Flags().IntVarP(&bulkWorkers, "workers", "w", 3, "Number of concurrent workers")
-	bulkCmd.Flags().Float64VarP(&bulkDelay, "delay", "d", 2.0, "Delay between checks (seconds)")
+	bulkCmd.Flags().Float64Var(&bulkDelay, "delay", 2.0, "Delay between checks (seconds)")
 	bulkCmd.Flags().Float64Var(&bulkJitter, "jitter", 1.0, "Random jitter added to delay (seconds)")
 	bulkCmd.Flags().IntVarP(&bulkTimeout, "timeout", "t", 15, "Connection timeout (seconds)")
 	bulkCmd.Flags().StringVar(&bulkFromAddress, "from", "test@gmail.com", "MAIL FROM address")
